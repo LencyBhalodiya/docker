@@ -1,0 +1,15 @@
+services:
+  client:
+    container_name: react-frontend
+    image: front-end-p1
+    build:
+      context: ./react-frontend
+      dockerfile: dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./react-frontend:/app #sync the react-frontend folder to the container app folder
+      - /app/node_modules #dont change node_modules
+    command: npm run dev
+
+
