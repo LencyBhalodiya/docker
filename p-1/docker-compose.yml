@@ -1,12 +1,12 @@
 services:
   client:
-    container_name: react-frontend
+    container_name: react-frontend 
     image: front-end-p1
     build:
-      context: ./react-frontend
-      dockerfile: dockerfile
+      context: ./react-frontend #path of your docker file
+      dockerfile: dockerfile # docker file name
     ports:
-      - 3000:3000
+      - 3000:3000 #port mapping
     volumes:
       - ./react-frontend:/app #sync the react-frontend folder to the container app folder
       - /app/node_modules #dont change node_modules
