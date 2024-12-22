@@ -11,5 +11,18 @@ services:
       - ./react-frontend:/app #sync the react-frontend folder to the container app folder
       - /app/node_modules #dont change node_modules
     command: npm run dev
+  server:
+   container_name: backend
+   image: backend-p1
+   build:
+     context: ./backend #path of your docker file
+     dockerfile: dockerfile # docker file name
+   ports:
+     - 8080:8080 #port mapping
+   volumes:
+      - ./backend:/server #sync the react-frontend folder to the container app folder
+      - /server/node_modules #dont change node_modules
+   command: npm start
+    
 
 
