@@ -11,13 +11,13 @@ app.use(express.json());                 // Parse JSON bodies
 
 // Test route
 app.get('/', (req, res) => {
-    console.log('Hello World'); 
-    res.json({ message: 'Welcome to the API' });
+    console.log('Hello Worldd'); 
+    res.json({ message: `Welcome.. ${process.env.TEST || 'me'}` });
 });
 
 
 // Server setup
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
