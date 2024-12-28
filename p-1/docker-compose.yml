@@ -11,6 +11,7 @@ services:
       - ./react-frontend:/app #sync the react-frontend folder to the container app folder
       - /app/node_modules #dont change node_modules
     command: npm run dev
+    
   server:
    container_name: backend
    image: backend-p1

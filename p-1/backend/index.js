@@ -12,7 +12,7 @@ app.use(express.json());                 // Parse JSON bodies
 // Test route
 app.get('/', (req, res) => {
     console.log('Hello Worldd'); 
-    res.json({ message: `Welcome.. ${process.env.TEST || 'me'}` });
+    res.json({ message: `Welcome.. ${process.env.TEST || 'me'} .. ${process.env.TEST2 || 'me2'}` });
 });
 
 
